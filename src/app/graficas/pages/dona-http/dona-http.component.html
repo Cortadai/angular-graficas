@@ -1,0 +1,27 @@
+<h1>Dona Http</h1>
+<hr>
+
+<div class="alert alert-info" 
+  *ngIf="doughnutChartData.datasets.length===0; else divDona;">
+  Cargando datos...
+</div>
+
+<div class="row">
+  <div class="col">
+
+    <ng-template #divDona>
+
+      <div style="display: block">
+        <canvas baseChart
+          [data]="doughnutChartData"
+          [type]="doughnutChartType">
+        </canvas>
+      </div>
+
+    </ng-template>
+
+  </div>
+</div>
+
+
+    
